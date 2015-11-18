@@ -4,29 +4,111 @@
     <meta charset="UTF-8">
     <title>Listagem de Usuários</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	
 
+	<!-- Include parser library -->
+    <script src="//www.parsecdn.com/js/parse-1.6.7.min.js"></script>
 </head>
 <body>
-	<header></header>
 
-	<div role="main">
-		<table>
-			<thead>
-				<tr>
-					<th>Nome</th>
-					<th>Sobrenome</th>
-					<th>E-mail</th>
-					<th>Usuário</th>
-					<th>Telefone</th>
-					<th>Celular</th>
-					<th>País</th>
-				</tr>
-			</thead>
-			<tbody></tbody>
-		</table>
-	</div>
+	<div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">Gerenciar Usuários</h1>
+                <!-- 
+                <nav>
+                    <ul>
+                        <li><a href="#">nav ul li a</a></li>
+                        <li><a href="#">nav ul li a</a></li>
+                        <li><a href="#">nav ul li a</a></li>
+                    </ul>
+                </nav> 
+                -->
+            </header>
+        </div>
 
-	<footer></footer>
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+                <table>
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Sobrenome</th>
+							<th>E-mail</th>
+							<th>Usuário</th>
+							<th>Telefone</th>
+							<th>Celular</th>
+							<th>País</th>
+							<th>Ações</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Nome</td>
+							<td>Sobrenome</td>
+							<td>E-mail</td>
+							<td>Usuário</td>
+							<td>Telefone</td>
+							<td>Celular</td>
+							<td>País</td>
+							<td>Ações</td>
+						</tr>
+						<tr>
+							<td>Nome</td>
+							<td>Sobrenome</td>
+							<td>E-mail</td>
+							<td>Usuário</td>
+							<td>Telefone</td>
+							<td>Celular</td>
+							<td>País</td>
+							<td>Ações</td>
+						</tr>
+						<tr>
+							<td>Nome</td>
+							<td>Sobrenome</td>
+							<td>E-mail</td>
+							<td>Usuário</td>
+							<td>Telefone</td>
+							<td>Celular</td>
+							<td>País</td>
+							<td>Ações</td>
+						</tr>
+						<tr>
+							<td>Nome</td>
+							<td>Sobrenome</td>
+							<td>E-mail</td>
+							<td>Usuário</td>
+							<td>Telefone</td>
+							<td>Celular</td>
+							<td>País</td>
+							<td>Ações</td>
+						</tr>
+
+					</tbody>
+				</table>
+
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <h3>footer</h3>
+            </footer>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+
+        <script>
+
+        	Parse.initialize("pMcaC9EghMFG2MtrDBMas1wd3vA40jgYUInhJWVb", "K7TQqFE67gD0HUExakN3O3JSHf320Gp1qrea58In");
+        	var TestObject = Parse.Object.extend("TestObject");
+        	var testObject = new TestObject();
+        	testObject.save({foo: "bar"}).then(function(object) {
+        	  alert("yay! it worked");
+        	});
+
+        </script>
 </body>
 </html>
