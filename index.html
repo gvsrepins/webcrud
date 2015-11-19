@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" ng-app> <!-- ng-app para inicializar o angular -->
+<html lang="pt_BR" ng-app="webCRUD"> <!-- ng-app para inicializar o angular -->
 <head>
     <meta charset="UTF-8">
-    <title>Listagem de Usuários</title>
+    <title>WebCRUD.io</title>
     <link rel="stylesheet" href="css/styles.css">
 	
 
@@ -13,7 +13,7 @@
 
 	<div class="header-container">
             <header class="wrapper clearfix">
-                <h1 class="title">Gerenciar Usuários</h1>
+                <h1 class="title">WebCRUD.io</h1>
                 <!-- 
                 <nav>
                     <ul>
@@ -28,8 +28,9 @@
 
         <div class="main-container">
             <div class="main wrapper clearfix">
+            <h2>Gerenciar Usuários</h2>
 
-                <table>
+                <table ng-controller="UserListController as userList">
 					<thead>
 						<tr>
 							<th>Nome</th>
@@ -43,7 +44,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						<tr ng-repeat="user in userList.users">
 							<td>Nome</td>
 							<td>Sobrenome</td>
 							<td>E-mail</td>
@@ -52,37 +53,7 @@
 							<td>Celular</td>
 							<td>País</td>
 							<td>Ações</td>
-						</tr>
-						<tr>
-							<td>Nome</td>
-							<td>Sobrenome</td>
-							<td>E-mail</td>
-							<td>Usuário</td>
-							<td>Telefone</td>
-							<td>Celular</td>
-							<td>País</td>
-							<td>Ações</td>
-						</tr>
-						<tr>
-							<td>Nome</td>
-							<td>Sobrenome</td>
-							<td>E-mail</td>
-							<td>Usuário</td>
-							<td>Telefone</td>
-							<td>Celular</td>
-							<td>País</td>
-							<td>Ações</td>
-						</tr>
-						<tr>
-							<td>Nome</td>
-							<td>Sobrenome</td>
-							<td>E-mail</td>
-							<td>Usuário</td>
-							<td>Telefone</td>
-							<td>Celular</td>
-							<td>País</td>
-							<td>Ações</td>
-						</tr>
+						</tr>				
 
 					</tbody>
 				</table>
@@ -96,8 +67,18 @@
                 <h3>footer</h3>
             </footer>
         </div>
+		
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
+
+        <script src="js/controllers/users.js"></script>
+
+        <script>
+        	
+
+        	
+
+        </script>
 </body>
 </html>
